@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Support openSUSE Leap 15.1
 ## 3.4.0 - 2019-09-18
 
   - Initial release for Ansible 2.8 or higher

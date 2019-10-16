@@ -18,12 +18,17 @@
   remote_user: root
   become: true
   roles:
-    - role: clamav
+    - role: bootstrap
+    - role: locales
+    - role: timezone
 
 - hosts: all
   remote_user: root
   become: true
-  tasks:
+  roles:
+    - role: clamav
+
+  post_tasks:
     - name: freshclam --version
       command: freshclam --version
       register: result

@@ -14,25 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-galaxy_info:
-  role_name: clamav
-  author: Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
-  description: Ansible Role for ClamAV Installation
-  company: PantaRei Design
-  license: Apache License 2.0
-  min_ansible_version: 2.9
-  platforms:
-    - name: Ubuntu
-      versions:
-        - xenial
-        - bionic
-        - eoan
-    - name: EL
-      versions:
-        - 7
-    - name: opensuse
-      versions:
-        - all
-  galaxy_tags:
-    - system
-dependencies: []
+- hosts: all
+  remote_user: root
+  become: true
+  tasks:
+    - name: freshclam --version
+      command: freshclam --version
+      register: result
+      changed_when: result is not succeeded
+
+    - name: clamscan --version
+      command: clamscan --version
+      register: result
+      changed_when: result is not succeeded

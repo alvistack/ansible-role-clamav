@@ -17,5 +17,5 @@
 _clamav_download:
   1.8.5:
     url: "https://marlam.de/clamav/releases/clamav-1.8.5.tar.xz"
-    dest: "/var/cache/ansible/clamav-1.8.5.tar.xz"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/clamav-1.8.5.tar.xz"
     checksum: "sha1:943210939c10da9e2cbe63474e0be681c144222b"

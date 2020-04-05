@@ -14,14 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: bootstrap
-  src: https://github.com/alvistack/ansible-role-bootstrap
-  version: develop
+_yum_repository:
+  - name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+    state: "latest"
 
-- name: locales
-  src: https://github.com/alvistack/ansible-role-locales
-  version: develop
-
-- name: timezone
-  src: https://github.com/alvistack/ansible-role-timezone
-  version: develop
+_yum:
+  - { state: "latest", name: "clamav" }
+  - { state: "latest", name: "clamd" }
+  - { state: "latest", name: "clamav-update" }

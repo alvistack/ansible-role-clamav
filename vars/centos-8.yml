@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_yum_repository:
+_rpm_repository:
   - name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
     state: "latest"
 

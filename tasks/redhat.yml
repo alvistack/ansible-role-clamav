@@ -26,7 +26,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ _yum_repository }}"
+  loop: "{{ _rpm_repository }}"
   register: result
   until: result is succeeded
   changed_when: false

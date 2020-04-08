@@ -19,13 +19,4 @@
   become: true
   tasks:
     - include_role:
-        name: bootstrap
-
-    - include_role:
-        name: locales
-
-    - include_role:
-        name: timezone
-
-    - include_role:
         name: clamav

@@ -13,12 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-_rpm_repository:
-  - name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
-    state: "latest"
-
-_yum:
-  - { state: "latest", name: "clamav" }
-  - { state: "latest", name: "clamd" }
-  - { state: "latest", name: "clamav-update" }

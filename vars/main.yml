@@ -13,9 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-_clamav_download:
-  1.8.5:
-    url: "https://marlam.de/clamav/releases/clamav-1.8.5.tar.xz"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/clamav-1.8.5.tar.xz"
-    checksum: "sha1:943210939c10da9e2cbe63474e0be681c144222b"

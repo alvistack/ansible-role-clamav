@@ -13,3 +13,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+- hosts: localhost
+  connection: local
+  remote_user: root
+  become: true
+  gather_facts: false
+  tasks:
+    - name: docker rm
+      docker_container:
+        name: "{{ item.name }}"
+        state: "absent"
+      loop_control:
+        label: "{{ item.name }}"
+      loop: "{{ molecule_yml.platforms }}"

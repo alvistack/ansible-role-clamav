@@ -1,7 +1,7 @@
 # Ansible Role for ClamAV
 
 [![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-clamav.svg)](https://travis-ci.com/alvistack/ansible-role-clamav)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-clamav.svg)](https://github.com/alvistack/ansible-role-clamav)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-clamav.svg)](https://github.com/alvistack/ansible-role-clamav/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-clamav.svg)](https://github.com/alvistack/ansible-role-clamav/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.clamav-blue.svg)](https://galaxy.ansible.com/alvistack/clamav)
 

@@ -14,12 +14,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: yum install yum-utils
+- name: yum install gnupg2
   yum:
-    name: "yum-utils"
+    name: "gnupg2"
     state: "present"
   changed_when: false
   ignore_errors: true
+  tags: clamav
+
+- name: rpm --import
+  rpm_key:
+    key: "{{ item.key }}"
+    fingerprint: "{{ item.fingerprint }}"
+    state: "{{ item.state }}"
+  loop: "{{ _rpm_key }}"
+  register: result
+  until: result is succeeded
   tags: clamav
 
 - name: yum-config-manager --add-repo

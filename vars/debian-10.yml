@@ -14,12 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt_key: []
-
-_apt_repository:
-  - repo: "deb http://deb.debian.org/debian buster non-free"
-    state: "present"
-
 _apt:
   - { state: "latest", name: "clamav" }
   - { state: "latest", name: "clamav-daemon" }

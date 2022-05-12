@@ -18,12 +18,12 @@
   remote_user: root
   become: true
   tasks:
-    - name: freshclam --version
-      ansible.builtin.command: freshclam --version
+    - name: ansible --version
+      ansible.builtin.command: ansible --version
       register: result
       changed_when: result is not succeeded
 
-    - name: clamscan --version
-      ansible.builtin.command: clamscan --version
+    - name: ansible-lint --version
+      ansible.builtin.command: ansible-lint --version
       register: result
       changed_when: result is not succeeded

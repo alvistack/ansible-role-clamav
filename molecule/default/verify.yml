@@ -20,11 +20,13 @@
   become: true
   tasks:
     - name: freshclam --version
-      ansible.builtin.command: freshclam --version
+      ansible.builtin.command:
+        cmd: freshclam --version
       register: result
       changed_when: result is not succeeded
 
     - name: clamscan --version
-      ansible.builtin.command: clamscan --version
+      ansible.builtin.command:
+        cmd: clamscan --version
       register: result
       changed_when: result is not succeeded

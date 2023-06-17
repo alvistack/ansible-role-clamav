@@ -14,8 +14,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt:
+_zypper:
   - { state: "latest", name: "clamav" }
-  - { state: "latest", name: "clamav-daemon" }
-  - { state: "latest", name: "clamav-freshclam" }
-  - { state: "latest", name: "libclamunrar9" }

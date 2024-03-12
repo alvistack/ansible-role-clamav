@@ -15,4 +15,4 @@
 # limitations under the License.
 
 _zypper:
-  - { state: "latest", name: "clamav" }
+  - { state: latest, name: clamav }

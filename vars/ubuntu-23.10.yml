@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _apt:
-  - { state: "latest", name: "clamav" }
-  - { state: "latest", name: "clamav-daemon" }
-  - { state: "latest", name: "clamav-freshclam" }
-  - { state: "latest", name: "libclamunrar9" }
+  - { state: latest, name: clamav }
+  - { state: latest, name: clamav-daemon }
+  - { state: latest, name: clamav-freshclam }
+  - { state: latest, name: libclamunrar9 }

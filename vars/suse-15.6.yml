@@ -14,9 +14,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_rpm_key: []
-_rpm_download: []
-_yum:
+_zypper:
   - { state: latest, name: clamav }
-  - { state: latest, name: clamd }
-  - { state: latest, name: clamav-update }

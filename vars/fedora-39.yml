@@ -15,7 +15,9 @@
 # limitations under the License.
 
 _rpm_key: []
-_rpm_download: []
+
+_yum_repository: []
+
 _yum:
   - { state: latest, name: clamav }
   - { state: latest, name: clamd }

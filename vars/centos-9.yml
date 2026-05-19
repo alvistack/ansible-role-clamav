@@ -31,7 +31,7 @@ _yum_repository:
     gpgkey: http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9
     state: present
 
-_yum:
+_dnf:
   - { state: latest, name: clamav }
   - { state: latest, name: clamd }
   - { state: latest, name: clamav-update }
